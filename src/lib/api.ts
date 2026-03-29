@@ -13,7 +13,8 @@ async function apphubFetch(table: string, path: string = "", options: RequestIni
     cache: "no-store",
   });
   if (!res.ok) {
-    throw new Error(`AppHub API error: ${res.status} ${res.statusText}`);
+    const body = await res.text().catch(() => "");
+    throw new Error(`AppHub API error: ${res.status} ${res.statusText} - ${body.substring(0, 100)}`);
   }
   return res.json();
 }

@@ -1,0 +1,7 @@
+{
+  "tool_name": "WebFetch",
+  "tool_input_preview": "{\"url\":\"https://company-board.jocodingax.ai/api/debug\",\"prompt\":\"Return the full JSON response exactly as-is, no summarization\"}",
+  "error": "Request failed with status code 404",
+  "timestamp": "2026-03-29T16:06:36.822Z",
+  "retry_count": 1
+}
