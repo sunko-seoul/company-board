@@ -1,9 +1,9 @@
-const API_URL = process.env.APPHUB_API_URL || "https://api.apphub.kr/v1";
+const API_URL = process.env.APPHUB_API_URL || "https://hub.jocodingax.ai";
 const API_KEY = process.env.APPHUB_API_KEY || "";
 const APP_SLUG = process.env.APPHUB_APP_SLUG || "company-board";
 
 async function apphubFetch(path: string, options: RequestInit = {}) {
-  const res = await fetch(`${API_URL}/apps/${APP_SLUG}${path}`, {
+  const res = await fetch(`${API_URL}/api/v1/apps/${APP_SLUG}${path}`, {
     ...options,
     headers: {
       "Content-Type": "application/json",
